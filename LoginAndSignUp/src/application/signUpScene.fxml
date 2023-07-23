@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpSceneController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="300.0" styleClass="left-panel" stylesheets="@signInDesign.css">
+               <children>
+                  <Label layoutX="-17.0" layoutY="570.0" prefHeight="20.0" prefWidth="133.0" text="Made by Xutao Gao" textFill="WHITE" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0">
+                     <font>
+                        <Font name="Consolas" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="300.0" prefHeight="600.0" prefWidth="500.0" styleClass="right-panel" stylesheets="@signInDesign.css" AnchorPane.leftAnchor="300.0">
+               <children>
+                  <Label layoutX="150.0" layoutY="120.0" styleClass="welcome-text" stylesheets="@signInDesign.css" text="Sign Up">
+                     <font>
+                        <Font name="Consolas" size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextField" layoutX="75.0" layoutY="200.0" prefHeight="40.0" prefWidth="350.0" promptText="username" styleClass="textfield" stylesheets="@signInDesign.css" />
+                  <Button fx:id="signUpButton" layoutX="75.0" layoutY="425.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" styleClass="login-button" stylesheets="@signInDesign.css" text="Sign Up" />
+                  <Line endX="350.0" layoutX="75.0" layoutY="485.0" stroke="#c9c9c9" />
+                  <Button fx:id="changeToSignInButton" layoutX="132.0" layoutY="500.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="236.0" styleClass="sign-up-button" stylesheets="@signInDesign.css" text="Already Registered? Sign in now">
+                     <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="passwordField" layoutX="75.0" layoutY="275.0" prefHeight="40.0" prefWidth="350.0" promptText="password" styleClass="textfield" stylesheets="@signInDesign.css" />
+                  <PasswordField fx:id="comfirmPasswordField" layoutX="75.0" layoutY="350.0" prefHeight="40.0" prefWidth="350.0" promptText="comfirm password" styleClass="textfield" stylesheets="@signInDesign.css" />
+                  <Label fx:id="usernameErrorLabel" layoutX="75.0" layoutY="240.0" prefHeight="17.0" prefWidth="350.0" text="This username is unavailable" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passwordErrorLabel" layoutX="75.0" layoutY="390.0" prefHeight="17.0" prefWidth="350.0" text="The passwords do not match" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passwordLengthErrorLabel" layoutX="75.0" layoutY="315.0" prefHeight="17.0" prefWidth="350.0" text="Password must be in the length of 7 and 19" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Consolas" size="12.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
